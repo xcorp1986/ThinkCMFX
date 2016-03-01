@@ -9,7 +9,6 @@ $Id: admin_login.css 22060 2012-12-19 03:01:55Z yanchixia $
 html{
 	padding:0;
 	margin:0;
-	background:#1262B7;
 }
 body {
 	padding:0;
@@ -17,77 +16,60 @@ body {
 	font-family:Arial, "Microsoft Yahei";
 }
 .wrap {
-	width: 250px;
+    padding: 20px;
+    background: #fff !important;
 	overflow:hidden;
-	margin: 180px auto 0;
 	-webkit-animation: bounceIn 600ms linear;
 	-moz-animation: bounceIn 600ms linear;
 	-o-animation: bounceIn 600ms linear;
 	animation: bounceIn 600ms linear;
 }
-
-h1 a {
-	display: block;
-	height: 50px;
-	width: 250px;
-	margin:auto;
-	overflow: hidden;
-	text-indent: -2000em;
-	background: url(../images/logo.png) no-repeat center center;
-}
-
-.login ul,
-.login li{
-	padding:0;
-	margin:0;
-	list-style:none;
-}
-.login ul{
-	background:#fff;
-	border:none;
-	box-shadow:1px 1px 1px #ccc inset;
-	border-radius:3px;
-	overflow:hidden;
-	margin-bottom:15px;
-	width:248px;
-	overflow:hidden;
-}
-.login li{
-	border-top:1px solid #d3d4d4;
-	padding:5px;
-}
-.login .verifycode-wrapper{
-	padding:0px;
-}
-.login li img{
-	vertical-align:top;
-}
-.login .input {
-	width: 225px;
-	padding: 5px;
+.input {
+	width:80%;
+	padding: 6px;
 	vertical-align: middle;
-	border:0 none;
+	border: 1px solid #ccc;
+    border-radius: 4px;
 	background:transparent;
 	font-size:18px;
 	font-family:Arial,"Microsoft Yahei";
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	margin: 0;
+    font: inherit;
 }
-.login .input:focus {
+.input:focus {
 	outline:0 none;
 }
 .btn {
-	width: 248px;
-	height: 38px;
-	padding: 0;
-	margin: 0;
-	vertical-align: middle;
-	background:#549fcc url(../images/btn.png) no-repeat;
-	overflow:visible;
-	color:#fff;
-	font-size:20px;
-	cursor:pointer;
-	font-family:Arial, "Microsoft Yahei";
-	border:none;
-	border-radius:3px;
+
+	width:80%;
+	padding: 5px 10px;
+	color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+	overflow: visible;
 }
 .btn:hover{
 	background-position:0 -40px;
@@ -174,4 +156,36 @@ h1 a {
 	100% {
 		transform: scale(1);
 	}
+}
+.landing-header {
+    display: block;
+    width: 100%;
+    height: 35vh;
+    min-height: 200px;
+    background: #52ACD9;
+    text-align: center
+}
+.landing-logo {
+    position: relative;
+    top: 65px;
+    top: calc(35vh - 160px);
+    line-height: 55px;
+    height: 55px;
+    font-size: 3.5rem;
+    color: #fff;
+}
+.landing-logo h2{
+	font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+	font-size: 30px;
+}
+.landing-body {
+    margin: -50px auto 50px auto;
+    max-width:350px;
+    min-height: 20px;
+    background: #FFF;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, .2)
 }
