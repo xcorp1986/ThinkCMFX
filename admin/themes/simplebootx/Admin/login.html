@@ -6,16 +6,19 @@
 		<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
 		<meta name="renderer" content="webkit|ie-comp|ie-stand">
 		<meta name="robots" content="noindex,nofollow">
-		<link href="__TMPL__Public/assets/css/admin_login.css" rel="stylesheet" />
+		<link href="__TMPL__Public/assets/css/admin_login.css?t={:time()}" rel="stylesheet" />
 		<style>
 			#login_btn_wraper{
 				text-align: center;
+				display: block;
 			}
 			#login_btn_wraper .tips_success{
-				color:#fff;
+				display: block;
+				color:#337AB7;
 			}
 			#login_btn_wraper .tips_error{
-				color:#DFC05D;
+				color:#FF0000;
+				display: block;
 			}
 			#login_btn_wraper button:focus{outline:none;}
 		</style>
@@ -27,33 +30,60 @@
 							document.body.innerHTML = '';
 					}, 0);
 			}
-		</script>
-		
+		</script>		
 	</head>
 <body>
-	<div class="wrap">
-		<h1><a href="__ROOT__">ThinkCMF {:L('ADMIN_CENTER')}</a></h1>
-		<form method="post" name="login" action="{:U('public/dologin')}" autoComplete="off" class="js-ajax-form">
-			<div class="login">
-				<ul>
-					<li>
-						<input class="input" id="js-admin-name" required name="username" type="text" placeholder="{:L('USERNAME_OR_EMAIL')}" title="{:L('USERNAME_OR_EMAIL')}" value="{$_COOKIE['admin_username']}"/>
-					</li>
-					<li>
-						<input class="input" id="admin_pwd" type="password" required name="password" placeholder="{:L('PASSWORD')}" title="{:L('PASSWORD')}" />
-					</li>
-					<li class="verifycode-wrapper">
-						{:sp_verifycode_img('length=4&font_size=20&width=248&height=42&use_noise=1&use_curve=0','style="cursor: pointer;" title="点击获取"')}
-					</li>
-					<li>
-						<input class="input" type="text" name="verify" placeholder="{:L('ENTER_VERIFY_CODE')}" />
-					</li>
-				</ul>
-				<div id="login_btn_wraper">
-					<button type="submit" name="submit" class="btn js-ajax-submit" data-loadingmsg="{:L('LOADING')}">{:L('LOGIN')}</button>
+	<div class="fuild-container">
+	<div class="landing-header">
+		<div class="landing-logo">				
+				<h2 style="color:#B2DFEE;margin:0;">ThinkCMF {:L('ADMIN_CENTER')}</h2>
+				<span style="font-size:14px;color:#B2DFEE;">版权所有 © www.thinkcmf.com 2015-2018</span>		        
+		</div>
+		
+	</div>
+	<div class="landing-body">
+		<div class="wrap">
+			<form method="post" name="login" action="{:U('public/dologin')}" autoComplete="off" class="js-ajax-form">
+				<div class="login">
+						<div class="col-xs-12">
+							<h3><i class="fa fa-user"></i> 请您登录</h3>
+						</div>
+						<div class="col-xs-12">
+							&nbsp;
+						</div>
+						<div class="col-xs-12">
+							<input class="input" id="js-admin-name" required name="username" type="text" placeholder="{:L('USERNAME_OR_EMAIL')}" title="{:L('USERNAME_OR_EMAIL')}" value="{$_COOKIE['admin_username']}"/>
+						</div>
+						<div class="col-xs-12">
+							&nbsp;
+						</div>
+						<div class="col-xs-12">
+							<input class="input" id="admin_pwd" type="password" required name="password" placeholder="{:L('PASSWORD')}" title="{:L('PASSWORD')}" />
+						</div>
+						<div class="col-xs-12">
+							&nbsp;
+						</div>
+						<div class="col-xs-5">
+							<input class="input" type="text" name="verify" placeholder="{:L('ENTER_VERIFY_CODE')}" />
+						</div>
+						<div class="col-xs-12">
+							&nbsp;
+						</div>
+						<div class="col-xs-7">
+							{:sp_verifycode_img('length=4&font_size=20&width=248&height=42&use_noise=1&use_curve=0','style="cursor: pointer;width:80%" title="点击获取"')}
+						</div>
+						<div class="col-xs-12">
+							&nbsp;
+						</div>
+						<div class="col-xs-12">
+							<div id="login_btn_wraper">
+							<button type="submit" name="submit" class="btn btn-primary btn-md btn-block js-ajax-submit">{:L('LOGIN')}</button>
+							</div>
+						</div>
 				</div>
-			</div>
-		</form>
+			</form>			
+		</div>
+	</div>
 	</div>
 
 <script>
