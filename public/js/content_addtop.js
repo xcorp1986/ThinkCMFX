@@ -99,7 +99,7 @@ function replace_image(uploadid, returnid) {
     
     $("#"+returnid).find(".image-url-input").val(contents[0]);
 	$("#"+returnid).find(".img_prew").attr('src', contents[0]);
-	$("#"+returnid).find(".img_a").attr('href', "javascript:onClick=image_priview('"+contents[0]+"')");
+ 	$("#"+returnid).find(".img_a").attr('href', "javascript:onClick=image_priview('"+contents[0]+"')");
     var filename = filenames[0].substr(0, filenames[0].indexOf('.'));
     $("#"+returnid).find(".image-alt-input").val(filename);
 }
